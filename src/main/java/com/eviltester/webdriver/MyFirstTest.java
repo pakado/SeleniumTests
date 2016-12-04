@@ -1,6 +1,6 @@
 package com.eviltester.webdriver;
 import Browsers.Browsers;
-import Browsers.BrowsersFactory;
+import Browsers.RandomBrwoser;
 
 import junit.framework.Assert;
 import org.junit.Test;
@@ -16,15 +16,8 @@ public class MyFirstTest {
 
     @Test
     public void startApp(){
-        Random random = new Random();
-        ArrayList<String> browsers = new ArrayList<String>();
-        browsers.add("firefox");
-        browsers.add("chrome");
-        browsers.add("ie11");
 
-        int index = random.nextInt(browsers.size());
-        Browsers browser = BrowsersFactory.getBrowserType(browsers.get(index));
-        WebDriver driver = browser.getWebDriver();
+        WebDriver driver = RandomBrwoser.getBrowser();
         waitFor(2000);
 
         driver.get("http://www.tutorialspoint.com/selenium/selenium_environment_setup.htm");
