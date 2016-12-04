@@ -9,8 +9,8 @@ import org.openqa.selenium.chrome.ChromeDriver;
  */
 public class ChromeBrowser implements Browsers {
 
-
     public WebDriver getWebDriver() {
+
         //For chrome
         System.setProperty("webdriver.chrome.driver", "drivers\\chromedriver.exe");
         WebDriver driver = new ChromeDriver();

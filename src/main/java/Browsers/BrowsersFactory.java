@@ -14,6 +14,9 @@ public class BrowsersFactory {
         else if(browser.equals("firefox")){
             return new FirefoxBrowser();
         }
+        else if(browser.equals("ie11")){
+            return new IE11Brwoser();
+        }
         else{
             return null;
         }

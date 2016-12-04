@@ -6,10 +6,8 @@ import junit.framework.Assert;
 import org.junit.Test;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
-
 import java.util.ArrayList;
 import java.util.Random;
-import java.util.Scanner;
 
 /**
  * Created by pkdo10 on 11/17/2016.
@@ -22,18 +20,25 @@ public class MyFirstTest {
         ArrayList<String> browsers = new ArrayList<String>();
         browsers.add("firefox");
         browsers.add("chrome");
+        browsers.add("ie11");
 
         int index = random.nextInt(browsers.size());
         Browsers browser = BrowsersFactory.getBrowserType(browsers.get(index));
         WebDriver driver = browser.getWebDriver();
+        waitFor(2000);
+
+        driver.get("http://www.tutorialspoint.com/selenium/selenium_environment_setup.htm");
+        driver.manage().window().maximize();
+        System.out.println(driver.getTitle());
+        waitFor(2000);
 
         driver.navigate().to("https://www.youtube.com");
         waitFor(2000);
         Assert.assertEquals("https://www.youtube.com/", driver.getCurrentUrl());
-        driver.findElement(By.xpath("//*[@id=\'masthead-search-term\']")).sendKeys("selenium");
+        driver.findElement(By.xpath("//*[@id='masthead-search-term']")).sendKeys("selenium");
         waitFor(2000);
-        driver.findElement(By.xpath("//*[@id=\'search-btn\']/span")).click();
-        waitFor(5000);
+        driver.findElement(By.xpath("//span[contains(text(),'Search')]")).click();
+        waitFor(2000);
         Assert.assertEquals("https://www.youtube.com/results?search_query=selenium",driver.getCurrentUrl());
 
         driver.close();
