@@ -14,8 +14,8 @@ public abstract class RandomBrwoser {
        Random random = new Random();
        ArrayList<String> browsers = new ArrayList<String>();
        browsers.add("firefox");
-       browsers.add("chrome");
-       browsers.add("ie11");
+       //browsers.add("chrome");
+       //browsers.add("ie11");
 
        int index = random.nextInt(browsers.size());
        Browsers browser = BrowsersFactory.getBrowserType(browsers.get(index));
