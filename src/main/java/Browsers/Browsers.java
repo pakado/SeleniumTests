@@ -9,4 +9,5 @@ import org.openqa.selenium.WebDriver;
 public interface Browsers {
 
     public abstract WebDriver getWebDriver();
+
 }
