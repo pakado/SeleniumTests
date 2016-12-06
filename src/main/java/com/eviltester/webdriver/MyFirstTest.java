@@ -50,10 +50,10 @@ public class MyFirstTest {
         }
 
         driver.findElement(By.xpath("//*[@ng-model='loginCtrl.username']")).clear();
-        driver.findElement(By.xpath("//*[@ng-model='loginCtrl.username']")).sendKeys("xxx@aternity.com");
+        driver.findElement(By.xpath("//*[@ng-model='loginCtrl.username']")).sendKeys("pakado.abera@aternity.com");
         waitFor(2000);
         driver.findElement(By.xpath("//*[@ng-model='loginCtrl.password']")).clear();
-        driver.findElement(By.xpath("//*[@ng-model='loginCtrl.password']")).sendKeys("***");
+        driver.findElement(By.xpath("//*[@ng-model='loginCtrl.password']")).sendKeys("mosheQ!2");
         waitFor(2000);
         driver.findElement(By.xpath("//*[@ng-click='loginCtrl.onSubmit()']")).click();
         driver.manage().timeouts().pageLoadTimeout(10, TimeUnit.SECONDS);
