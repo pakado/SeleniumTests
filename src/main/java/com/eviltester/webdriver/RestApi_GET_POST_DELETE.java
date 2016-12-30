@@ -22,16 +22,16 @@ public class RestApi_GET_POST_DELETE {
         System.out.println("Testing 1 - Send Http GET request");
         http.sendGet();
 
-        System.out.println("Testing 2 - Send Http POST request\n");
+        System.out.println("\nTesting 2 - Send Http POST request");
         http.sendPost();
 
         System.out.println("\nTesting 3 - Send Http GET request");
         http.sendGet();
 
-        System.out.println("\nTesting 4 - Send Http DELETE request\n");
+        System.out.println("\nTesting 4 - Send Http DELETE request");
         http.sendDelete();
 
-        System.out.println("Testing 5 - Send Http GET request");
+        System.out.println("\nTesting 5 - Send Http GET request");
         http.sendGet();
     }
 
@@ -46,7 +46,7 @@ public class RestApi_GET_POST_DELETE {
             conn.setRequestMethod("GET");
             conn.setRequestProperty("Accept", "application / json");
 
-            System.out.println(conn.getResponseCode());
+            System.out.println("Response Code : " + conn.getResponseCode());
             if (conn.getResponseCode() != 200) {
                 throw new RuntimeException("HTTP error code : " + conn.getResponseCode());
             }
@@ -56,7 +56,7 @@ public class RestApi_GET_POST_DELETE {
             while (scan.hasNext())
                 entireResponse += scan.nextLine();
 
-            System.out.println("Response : "+entireResponse);
+            System.out.println(entireResponse);
 
             scan.close();
 
@@ -109,7 +109,6 @@ public class RestApi_GET_POST_DELETE {
 
         //print result
         System.out.println(response.toString());
-
     }
 
     // HTTP DELETE request
@@ -123,7 +122,7 @@ public class RestApi_GET_POST_DELETE {
             conn.setRequestMethod("DELETE");
             conn.setRequestProperty("Accept", "application / json");
 
-            System.out.println(conn.getResponseCode());
+            System.out.println("Response Code : " + conn.getResponseCode());
             if (conn.getResponseCode() != 200) {
                 throw new RuntimeException("HTTP error code : " + conn.getResponseCode());
             }

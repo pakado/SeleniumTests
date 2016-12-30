@@ -50,7 +50,7 @@ public class MyFirstTest {
         }
 
         driver.findElement(By.xpath("//*[@ng-model='loginCtrl.username']")).clear();
-        driver.findElement(By.xpath("//*[@ng-model='loginCtrl.username']")).sendKeys("xx");
+        driver.findElement(By.xpath("//*[@ng-model='loginCtrl.username']")).sendKeys("xxx");
         waitFor(2000);
         driver.findElement(By.xpath("//*[@ng-model='loginCtrl.password']")).clear();
         driver.findElement(By.xpath("//*[@ng-model='loginCtrl.password']")).sendKeys("xxx");
