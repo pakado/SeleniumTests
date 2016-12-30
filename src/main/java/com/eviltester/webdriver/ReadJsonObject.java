@@ -42,7 +42,7 @@ public class ReadJsonObject{
                 String formatAddress = arr.getJSONObject(i).getString("formatted_address");
                 System.out.println("Address : " + formatAddress);
 
-            //validating Address as per the requirement
+                //validating Address as per the requirement
                 if(formatAddress.equalsIgnoreCase("Chicago, IL, USA"))
                 {
                     System.out.println("Address is as Expected");

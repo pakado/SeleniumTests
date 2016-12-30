@@ -38,7 +38,7 @@ public class RestApi_GET_POST_DELETE {
     // HTTP GET request
     private void sendGet() throws Exception {
 
-        String apiGet = "http://pakado-wks:3000/posts";
+        String apiGet = "http://localhost:3000/posts";
 
         try {
             URL url = new URL(apiGet);
@@ -73,7 +73,7 @@ public class RestApi_GET_POST_DELETE {
     // HTTP POST request
     private void sendPost() throws Exception {
 
-        String apiPost = "http://pakado-wks:3000/posts";
+        String apiPost = "http://localhost:3000/posts";
         URL url = new URL(apiPost);
         HttpURLConnection con = (HttpURLConnection) url.openConnection();
 
@@ -114,7 +114,7 @@ public class RestApi_GET_POST_DELETE {
     // HTTP DELETE request
     private void sendDelete()throws Exception{
 
-        String apiDelete = "http://pakado-wks:3000/posts/2";
+        String apiDelete = "http://localhost:3000/posts/2";
 
         try {
             URL url = new URL(apiDelete );
